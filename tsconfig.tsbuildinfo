@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/middlewares/authmiddleware.ts","./src/model/ride.ts","./src/model/user.ts","./src/routes/riderrouts.ts","./src/routes/userroute.ts"],"version":"5.9.2"}
