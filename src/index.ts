@@ -11,9 +11,11 @@ import mongoose from "mongoose";
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://share-car-fe-w4z6.vercel.app',
-  credentials: true // if you use cookies or auth headers
+  origin: "https://share-car-fe-w4z6.vercel.app", // exact deployed frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/user", UserRoute);
