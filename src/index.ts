@@ -9,12 +9,14 @@ import RiderRoute  from "./routes/Riderrouts.js";
 import mongoose from "mongoose";
 
 const app = express();
-app.use(express.json());
+
 app.use(cors({
-  origin: "*", // exact deployed frontend URL
+  origin: ["https://share-car-fe-w4z6.vercel.app", "http://localhost:5173" ,"http://localhost:4000"],// exact deployed frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+app.use(express.json());
+ 
 
 app.use(express.urlencoded({ extended: true }));
 
