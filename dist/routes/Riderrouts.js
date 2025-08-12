@@ -47,7 +47,7 @@ route.post("/create-ride", AuthMiddleware, async (req, res) => {
         endAt,
         fare,
         mobileNo,
-        date: validation.data.date, // Use validated date  
+        date: validation.data.date,
         seats,
         cartype,
     });

@@ -10,12 +10,13 @@ import mongoose from "mongoose";
 
 const app = express();
 
+const allowedOrigins = process.env.FRONTEND_URL?.split(",") || [
+  process.env.FRONTEND_URL || "https://share-car-fe-w4z6.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:4000"
+];
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || "https://share-car-fe-w4z6.vercel.app",
-    "http://localhost:5173",
-    "http://localhost:4000"
-  ],
+  origin: allowedOrigins,
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
