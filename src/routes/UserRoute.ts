@@ -9,11 +9,8 @@ import jwt from "jsonwebtoken"
 import AuthMiddleware from "../middlewares/AuthMiddleware.js";
 import cors from "cors";
 
-
-
 const route = express.Router();
-const JWT_SECRET = process.env.JWT_SCRECT
-route.use(cors());
+const JWT_SECRET = process.env.JWT_SCRECT;
 
 route.post("/signup", async (req, res) => {
   try {

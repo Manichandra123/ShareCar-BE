@@ -5,8 +5,6 @@ import{ BookedModel, RideModel} from "../model/Ride.js";
 import AuthMiddleware from "../middlewares/AuthMiddleware.js";
 import cors from "cors";
 
-route.use(cors());
-
 route.post("/create-ride", AuthMiddleware, async (req, res) => {
   const { startfrom, endAt, mobileNo  , seats , cartype } = req.body;
   let date = req.body.date;
